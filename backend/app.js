@@ -15,11 +15,13 @@ app.use(
   cors({
     origin: [
       'http://localhost:5173',
+      'https://dev-help-doubt-tracker.vercel.app',
       'https://dev-help-doubt-tracker-n05d8198i-ritik-rajputs-projects.vercel.app'
     ],
     credentials: true,
   })
 );
+
 
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
