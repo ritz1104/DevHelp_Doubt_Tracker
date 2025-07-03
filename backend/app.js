@@ -13,10 +13,15 @@ const app = express();
 
 app.use(
   cors({
-    origin: 'http://localhost:5173', // frontend origin
-    credentials: true, // if using cookies or sessions in future
+    origin: [
+      'http://localhost:5173',
+      'https://dev-help-doubt-tracker-n05d8198i-ritik-rajputs-projects.vercel.app'
+    ],
+    credentials: true,
   })
 );
+
+
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(express.json());
