@@ -41,19 +41,29 @@ exports.register = async (req, res) => {
 
 exports.login = async (req, res) => {
   const errors = validationResult(req);
+  console.log("Validation errors:", errors);
+
+  const { email, password } = req.body;
+  console.log("Login payload:", email, password);
+
   if (!errors.isEmpty())
     return res.status(400).json({ errors: errors.array() });
 
-  const { email, password } = req.body;
-
   try {
     const user = await User.findOne({ email });
-    if (!user)
-      return res.status(400).json({ msg: "Invalid credentials" });
+    if (!user) {
+      console.log("User not found with email:", email);
+      return res.status(400).json({ msg: "Invalid credentials (email)" });
+    }
+
+    console.log("User found:", user.email, "Stored hash:", user.password);
 
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch)
-      return res.status(400).json({ msg: "Invalid credentials" });
+    console.log("Password match result:", isMatch);
+
+    if (!isMatch) {
+      return res.status(400).json({ msg: "Invalid credentials (password)" });
+    }
 
     const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
       expiresIn: '7d',
@@ -61,10 +71,12 @@ exports.login = async (req, res) => {
 
     res.json({
       token,
-      user: { id: user._id, name: user.name, email: user.email, role: user.role }
+      user: { id: user._id, name: user.name, email: user.email, role: user.role },
     });
   } catch (err) {
+    console.error("Login error:", err);
     res.status(500).json({ msg: "Server error" });
   }
 };
+
 

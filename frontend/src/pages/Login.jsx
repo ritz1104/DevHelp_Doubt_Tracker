@@ -20,6 +20,7 @@ const Login = () => {
       login(res.data.token, res.data.user);
       toast.success("Login successful!");
 
+      console.log("User data:", res);
       const role = res.data.user.role;
       if (role === "student") navigate("/dashboard");
       else if (role === "mentor") navigate("/mentor-dashboard");
