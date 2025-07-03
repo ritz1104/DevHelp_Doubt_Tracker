@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.doubt-detail-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.doubt-detail-container h1 {
+  margin-bottom: 1rem;
+  color: #00bfff;
+}
+
+.doubt-desc {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.doubt-detail-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.status-detail {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.resolve-icon-detail {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: #22c55e;
+}
+
+.comments-section {
+  margin-bottom: 2rem;
+}
+
+.comment-item {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.comment-icon {
+  margin-right: 0.5rem;
+  color: #00bfff;
+}
+.upload-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.upload-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  background: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.upload-btn:hover {
+  background: #1e40af;
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.download-btn:hover {
+  background-color: #555;
+}

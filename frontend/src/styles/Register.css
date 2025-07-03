@@ -1,0 +1,82 @@
+/* styles/Register.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-background {
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-card {
+  background: #111;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.1);
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #00bfff;
+}
+
+.login-card input,
+.login-card select {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #333;
+  background: #0c0c0c;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.login-card input:focus,
+.login-card select:focus {
+  border-color: #00bfff;
+  outline: none;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 0.9rem;
+  background: #00bfff;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-card button:hover {
+  background: #009fd9;
+}
+
+.register-link {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.register-link span {
+  color: #00bfff;
+  text-decoration: underline;
+}

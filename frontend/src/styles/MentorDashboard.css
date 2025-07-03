@@ -1,0 +1,194 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.mentor-dashboard-page {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.mentor-dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.mentor-dashboard-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-buttons button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #ccc;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.mentor-doubt-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.mentor-doubt-item {
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mentor-doubt-item h3 {
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+.mentor-doubt-item p {
+  margin: 0.25rem 0;
+  color: #ccc;
+}
+
+.student-name {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.mentor-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.reply-link {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.reply-link:hover {
+  text-decoration: underline;
+}
+
+.mentor-actions button {
+  padding: 0.4rem 0.8rem;
+  background: #16a34a;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mentor-actions button:hover {
+  background: #15803d;
+}
+/* Show the latest reply under each doubt */
+.latest-reply {
+  display: flex;
+  align-items: flex-start;
+  background: #1a1a1a;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+}
+
+.reply-icon {
+  font-size: 1.2rem;
+  color: #00bfff;
+  margin-right: 0.5rem;
+}
+
+.reply-text {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.reply-author {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.mentor-dashboard-container .reply-form-inline {
+  display: flex;
+  margin-top: 0.75rem;
+}
+
+.mentor-dashboard-container .reply-input {
+  flex: 1;
+  padding: 0.5rem;
+  background: #0c0c0c;
+  border: 1px solid #333;
+  border-radius: 4px 0 0 4px;
+  color: #fff;
+}
+
+.mentor-dashboard-container .reply-button {
+  padding: 0 1rem;
+  background: #00bfff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mentor-dashboard-container .reply-button:hover {
+  background: #009fd9;
+}
+
+/* MentorDashboard.css */
+
+.doubt-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+  border: 1px solid #333;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .mentor-dashboard-container {
+    padding: 1rem;
+  }
+  .filter-buttons button {
+    margin: 0.3rem;
+  }
+}

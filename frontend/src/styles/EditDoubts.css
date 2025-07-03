@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.edit-doubt-page {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.edit-doubt-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.1);
+}
+
+.edit-doubt-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #00bfff;
+  font-size: 1.8rem;
+}
+
+.edit-doubt-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-doubt-form label {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.edit-doubt-form input,
+.edit-doubt-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.4rem;
+  background: #0c0c0c;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.edit-doubt-form input:focus,
+.edit-doubt-form textarea:focus {
+  outline: none;
+  border-color: #00bfff;
+}
+
+.edit-doubt-form button {
+  margin-top: 1.5rem;
+  padding: 0.9rem;
+  background: #00bfff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.edit-doubt-form button:hover {
+  background: #009fd9;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .edit-doubt-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
